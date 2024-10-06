@@ -1,0 +1,243 @@
+body.dark-mode {
+  --bg-color: #222;
+  --text-color: #f4f4f4;
+}
+
+/* Base Styles for Mobile-first Design */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #ccc;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin: 10px 0;
+}
+
+/* Main Section */
+#main-content {
+  display: flex;
+  flex-direction: row; /* Stacked layout for mobile */
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.left-column,
+.right-column,
+.education {
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+.right-column div,
+.education div {
+  flex: 1;
+}
+
+.education {
+  text-align: start;
+}
+
+/* Education Section */
+.education div {
+  text-align: start;
+  flex-basis: 50%;
+}
+
+.education ul {
+  padding: 10;
+  list-style: outside;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-top: 1px solid #ccc;
+}
+
+footer .reviews {
+  display: flex;
+  flex-direction: column; /* Stacked on mobile */
+  align-items: center;
+}
+
+footer .review-card {
+  width: 90%;
+  margin: 10px 0;
+  padding: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode footer {
+  background-color: #333;
+}
+
+body.dark-mode .card {
+  background-color: #444;
+}
+
+/* Dark Mode Specific Header */
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Media Query for Tablets and Small Screens (768px and up) */
+@media (max-width: 468px) {
+  body {
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  nav ul li {
+    margin: 0;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+  }
+
+  nav ul li:last-child {
+    border-right: none;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  #main-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+    margin: 0;
+  }
+
+  .left-column,
+  .right-column,
+  .education {
+    width: 90%;
+    padding: 0;
+  }
+
+  .left-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+
+  .left-column ul {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    padding: 0 0 10px 0;
+  }
+
+  .left-column ul li {
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .left-column ul li:last-child {
+    border-bottom: none;
+  }
+
+  .left-column ul li:first-child {
+    border-top: 1px solid #ccc;
+  }
+
+  main ul li {
+    list-style: none;
+  }
+
+  .right-column div {
+    padding-left: 20px;
+    padding-bottom: 10px;
+  }
+
+  .right-column h2 {
+    text-align: center;
+  }
+
+  .education div {
+    padding-left: 20px;
+
+    text-align: left;
+  }
+
+  .education ul {
+    padding: 0;
+  }
+
+  .education h2 {
+    text-align: center;
+  }
+
+  footer {
+    width: 90%;
+    padding: 20px;
+    margin: 0;
+  }
+
+  footer .reviews {
+    flex-direction: column; /* Side-by-side layout */
+    justify-content: center;
+  }
+
+  footer .review-card {
+    display: flex;
+    flex-direction: column;
+    width: 250px; /* Slightly larger for tablets */
+    margin: 0 10px;
+    text-align: start;
+  }
+}

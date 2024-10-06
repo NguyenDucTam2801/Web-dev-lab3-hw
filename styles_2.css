@@ -1,0 +1,111 @@
+/* Base Styles for Mobile-first Design */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+body.dark-mode {
+  --bg-color: #222;
+  --text-color: #f4f4f4;
+}
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+    margin: 10px 0;
+  }
+
+header {
+  background-color: var(--header-bg-color);
+}
+
+body.dark-mode header {
+  background-color: #444;
+}
+
+/* Custom CSS to ensure styles blend with Bootstrap */
+#main-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-column,
+.right-column,
+.education {
+  padding: 15px;
+  background-color: var(--bg-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.education ul,
+.left-column ul {
+  padding: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #f4f4f4;
+}
+
+footer .reviews .review-card {
+  padding: 20px;
+  background-color: var(--bg-color);
+}
+
+footer .review-card .card-body {
+  padding: 15px;
+}
+
+body.dark-mode footer {
+  background-color: #333;
+}
+
+body.dark-mode .card {
+  background-color: #444;
+}
+
+/* Dark Mode Specific Header */
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+  .left-column,
+  .right-column,
+  .education {
+    margin-bottom: 20px;
+  }
+}
